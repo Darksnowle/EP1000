@@ -45,6 +45,10 @@ h1, h2{
     float: right;
 }
 
+#safety{
+    color: red;
+}
+
 #footer{
     clear: both;
     padding: 10px;
