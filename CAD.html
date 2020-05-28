@@ -94,10 +94,10 @@
                       
                       <p>It is similar to AutoCAD or Inventor. However this program is free for educational use, provided you sign up (using your email) as a registered student of Singapore Polytechnic. It is easy to learn and master as there are alot of tutorials online even from Autodesk itself.</p>
                       
-                      <p>We were given our first assignments to get used to the software:</p>
-                      <u><a href="documents/Exercise1.f3d">Exercise 1</a></u><br>
-                      <u><a href="documents/Exercise2.f3d">Exercise 2</a></u><br>
-                      <u><a href="documents/Exercise3.f3d">Exercise 3</a></u><br>
+                      <p>We were given our first assignments to get used to the software. Here is my documentation on it:</p>
+                      <u><a href="Exercise1.html">Exercise 1</a></u><br>
+                      <u><a href="Exercise2.html">Exercise 2</a></u><br>
+                      <u><a href="Exercise3.html">Exercise 3</a></u><br>
                       
                       <p>Once we were more comfortable with the software, we were given another assignment on the 15th of May, which was to design our own <b>Fidget Spinner</b> and our own <b>Keyring Nametag</b></p>
                       
@@ -118,6 +118,8 @@
                       <p>Once that is done, I extrude each side by 4mm since the maximum thickness is 8mm. I lastly used a fillet to fillet the corners. Below is my finished product. </p>
                       
                       <img src="images/spinner.PNG" width="800">
+                      
+                      <hr>
                       
                       <h3>Keyring Nametag</h3>
                       
@@ -142,6 +144,86 @@
                       
                       <img src="images/keyringdone.PNG" width="800">
                         
+                      <hr>
+                      
+                      <h3><u>3D Modelling (18 May)</u></h3>
+                      
+                      <p>For this lesson, we were taught the different techniques on 3D modelling such as revolution, lofting and sculpting. We were then tasked to design our own <b>Knight Chess Piece</b> with reference. Here is my documentation on how i did it:</p>
+                      
+                      <h3>Knight Chess Piece</h3>
+                      
+                      <p>To start things off, i first find an image of the chess piece from google as a reference or canvas to aid in the creation of the design. Once that is done, i went on ahead on Fusion 360, and clicked on <b>Insert>Canvas</b>. I then browsed my computer for the downloaded image of my knight piece. Once that is done i <b>Calibrated</b> the image so that its length will be 30mm which is the maximum length according to the specifications. Once that is done, i then started tracing half of the base of the piece, followed by a <b>revolve</b> against the middle point construction line which is the axis of the revolve.</p>
+                      
+                      <img src="images/knightrevolve.PNG">
+                      
+                      <p>Next, i just sketched out the body of the piece as accurately as possible with the combination of line and circle tool to help with the curved edges.</p>
+                      
+                      <img src="images/knightextrude.PNG">
+                      
+                      <p>I then ended it off by an extrusion of 1.5mm on both sides. My final product is shown below:</p>
+                      
+                      <img src="images/knightdone.PNG"><br>
+                      <u><a href="documents/Knight2.f3d">My Knight Piece</a></u>
+                      
+                      <hr>
+                      
+                      
+                      <h3>Fusion 360 Features (22 May)</h3>
+                      
+                      <p>For this lesson, we were taught on different Fusion 360 features. One particular one is called <b>Parametric Modelling</b>.</p>
+                        
+                      <h4>Parametric Modelling</h4>
+                      <p>This feature allows you to define your drawings/sketches using variables. This feature can be found at <b>Modify > Change Parameters</b>.</p>
+                          <ul>
+                              <li>The workflow is as follows:</li>
+                                <ul>
+                                    <li>Draw your sketch</li>
+                                    <li>Use Modify > Change Parameters to define variables for the dimensions</li>
+                                    <li>Apply the variables to the dimensions</li>
+                                    <li>Should you change your paramters, the sketch/object changes.</li>
+                                </ul>
+                              <li>In the parameters box you define:</li>
+                                <ul>
+                                    <li>the name of the parameter</li>
+                                    <li>the type of the parameter e.g. mm</li>
+                                    <li>a value (which can be changed)</li>
+                                    <li>a comment to identify the parameter created</li>
+                                </ul>
+                          </ul>
+                      <p>You will be able to see how i implemented this feature with the assignment given to me which is to make my own laptop stand.</p>
+                      
+                      <h3>Laptop Stand</h3>
+                      
+                      <h4><u>Leg Component</u></h4>
+                      
+                      <p>I first start by creating a new component and renamed it to <b>Leg</b>. Then i start my skecth on the right side of the origin and turn on the origin tab. i then draw the design with the appropriate dimensions as seen below. </p>
+                      
+                      <img src="3d/leg_stand.PNG">
+                      
+                      <p>Now is where i set all the different parameters. As mentioned previously, to get the parameters tab it is just <b>Modify > Change Parameters</b>. The purpose of doing this is so that i can change the different measurements easily rather than having to manually change the measuremunts of the sketch one by one. Once that is done, i went on ahead and created new parameters</p>
+                        <ul> 
+                            <li>
+                          Firstly, i created a parameter <b>t</b> which is for the thickness of the leg. I changed the unit to <b>inches(in)</b> and the <b>Expression</b> to 0.25
+                            </li>
+                            <li>Secondly, i creater a parameter <b>legWidth</b>, with the <b>Expression</b> being 270mm.</li>
+                        </ul>
+                      
+                      <img src="3d/parameters.PNG">
+                      
+                      <p>Once that is done, I went ahead and extruded it by the parameter <b>t</b>. I also went ahead to fillet all the edges after extruding it. For this design we are going to need two legs so i went ahead and right click the <b>Leg</b> tab and copied it. I then right clicked anywhere on the screen and paste it. Once done, i went ahead and pressed <b>Assemble > Joint</b>. I then click on both surfaces of the leg, before changing the <b>Offset Z</b> to our <b>legWidth</b> parameter. It should appear like this:</p>
+                      
+                      <img src="3d/legwidth.PNG">
+                      
+                      <h3>Top Of Laptop Stand</h3>
+                      
+                      <p>Now that the leg is more or less done, i moved on to work on the top of the stand. I did the same thing as i did for the legs which was to create a new component and renamed it to <b>Top</b>.I then created a sketch on the slant part of the leg. Then i went <b> Create > Project / Include > Project</b> or simply just press the <b>P</b> key, and click on the left and right slant. once done i drew a rectangle and dimensioned it accordingly. I also extruded downwards by <b>-t</b> as seen below:</p>
+                    
+                      <img src="3d/toprect.PNG"><br>
+                      <img src="3d/extrude2.PNG">
+                      
+                      <p>As you can see from the photo above, there are some interference between the top plate and the legs. In order to fix that, go to <b>Modify > Combine</b>, the <b>Target Body</b> is the leg while the <b>Tool Bodies</b> is the plate. Make sure that the <b>Operation</b> is on <b>Cut</b> and <b>Keep Tools</b> is on.By doing that, it will remove the interference. I then filleted the edges for safety purposes. I can then edit the different measurements through the parameters menu. </p>
+                      
+                      <img src="3d/removed.PNG">
                       
                       
  
