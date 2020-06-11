@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Website</title>
+        <link rel="stylesheet" type="text/css" href="style3.css" />
+	</head>
+
+	<body>
+		<div id="container"> 
+            <div id="header">
+                <h1>My Website</h1>
+            </div>
+        
+        <div id="content">
+            <div id="nav">
+                <h2>Navigation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a  href="info.html">Module Schedule</a></li>
+                        <li><a href="safety.html">FabLab Safety</a></li>
+                        <li><a href="Web.html">Project Management, Web Development and Version Control</a></li>
+                        <li><a class="selected" href="CAD.html">Computer Aided Design</a></li>
+                    </ul>
+                
+            </div>
+                  <div id="main">
+                      <h2><u>Computer Aided Design</u></h2>
+                      
+                      
+                      <h3>Laptop Stand</h3>
+                      
+                      <h4><u>Leg Component</u></h4>
+                      
+                      <p>I first start by creating a new component and renamed it to <b>Leg</b>. Then i start my skecth on the right side of the origin and turn on the origin tab. i then draw the design with the appropriate dimensions as seen below. </p>
+                      
+                      <a href="3d/leg_stand.PNG"><img src="3d/leg_stand.PNG" width=500></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <p>Now is where i set all the different parameters. As mentioned previously, to get the parameters tab it is just <b>Modify > Change Parameters</b>. The purpose of doing this is so that i can change the different measurements easily rather than having to manually change the measuremunts of the sketch one by one. Once that is done, i went on ahead and created new parameters</p>
+                        <ul> 
+                            <li>
+                          Firstly, i created a parameter <b>t</b> which is for the thickness of the leg. I changed the unit to <b>inches(in)</b> and the <b>Expression</b> to 0.25
+                            </li>
+                            <li>Secondly, i creater a parameter <b>legWidth</b>, with the <b>Expression</b> being 270mm.</li>
+                        </ul>
+                      
+                      <a href="3d/parameters.PNG"><img src="3d/parameters.PNG" width=500></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <p>Once that is done, I went ahead and extruded it by the parameter <b>t</b>. I also went ahead to fillet all the edges after extruding it. For this design we are going to need two legs so i went ahead and right click the <b>Leg</b> tab and copied it. I then right clicked anywhere on the screen and paste it. Once done, i went ahead and pressed <b>Assemble > Joint</b>. I then click on both surfaces of the leg, before changing the <b>Offset Z</b> to our <b>legWidth</b> parameter. It should appear like this:</p>
+                      
+                      <a href="3d/legwidth.PNG"><img src="3d/legwidth.PNG" width=500></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <h3>Top Of Laptop Stand</h3>
+                      
+                      <p>Now that the leg is more or less done, i moved on to work on the top of the stand. I did the same thing as i did for the legs which was to create a new component and renamed it to <b>Top</b>.I then created a sketch on the slant part of the leg. Then i went <b> Create > Project / Include > Project</b> or simply just press the <b>P</b> key, and click on the left and right slant. once done i drew a rectangle and dimensioned it accordingly. I also extruded downwards by <b>-t</b> as seen below:</p>
+                    
+                      <a href="3d/toprect.PNG"><img src="3d/toprect.PNG" width=500></a><br>
+                      <a href="3d/extrude2.PNG"><img src="3d/extrude2.PNG" width=500></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <p>As you can see from the photo above, there are some interference between the top plate and the legs. In order to fix that, go to <b>Modify > Combine</b>, the <b>Target Body</b> is the leg while the <b>Tool Bodies</b> is the plate. Make sure that the <b>Operation</b> is on <b>Cut</b> and <b>Keep Tools</b> is on.By doing that, it will remove the interference. I then filleted the edges for safety purposes. I can then edit the different measurements through the parameters menu. </p>
+                      
+                      <a href="3d/removed.PNG"><img src="3d/removed.PNG" width=500></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <h3>Leg Support</h3>
+                      
+                      <p>Our stand is basically almost done. However, if we were to put this together, it would be all wobbly as there is no support. So, for the next step, i will be adding leg supports. The way i do so is by again adding in a new <b>Component</b> and calling it <b>Support</b>, just so it is easier to navigate if i need to edit anything. Next, i did an <b>offset plane</b> on one of the back of the legs. i offset it by <b>-45mm</b> and extended so that it covers the other leg, as seen below.</p>
+                      
+                      <a href="3d/offsetsupport.PNG"><img src="3d/offsetsupport.PNG" width=500></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <p>Once that is done, i then went ahead and created a new sketch on that plane. What i want to do now is see the inner section of the two legs. I can do that by going to <b>Sketch (or Create) > Project / Include > Intersect</b>. For the <b>Selection Filter</b>, i selected bodies, and then i selected the two legs. Once that is done i drew a rectangle and constrained and dimensioned accordingly.Then final process for the sketch is to just draw a line in the middle of the rectangle which is to help us model in a tab that can be fixed on the leg. The final product should look like so. </p>
+                      
+                      <a href="3d/supportsketch.PNG"><img src="3d/supportsketch.PNG" width=500></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <p>After doing so, i selected the appropriate sketch profiles that i want to extrude. I then <b>Extrude</b> it by <b>t / 2, Symmetric</b>. You should then see the support. I then decide to create another support, so i decided to mirror it. To do so, i went to <b>Construct > Midplane</b> and selected the front and back face of the legs. This should then produce a plane that is located at the middle of the legs, which acts as a reference point to help us mirror our support later on. I then went to <b>Sketch (OR Create) > Mirror</b> and select <b>Bodies</b> for the pattern type. For the <b>Objects</b>, I selected the support and for the <b>Mirror Plane</b>, I selected the <b>Midplane</b> from before. This then should create another support. Now, i decided that i wanted to round of the edged of the support but am too lazy to click every single edge of the support. I can however ease this process by using the <b>parametric timeline</b> which is located at the bottom left of our screen. What i want to do now is step back one step before the mirror feature, and fillet the edges. Once that is that, i can then use the timeline feature and step forward again. This basically eases our job and allows the mirrored support to be filleted as well. Once all that is done, the final product should look like so.</p>
+                      
+                      <a href="3d/supportdone.PNG"><img src="3d/supportdone.PNG" width=500></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <h3>Final Product</h3>
+                      
+                      <p>However, if you return back to the top level(right click the top tab and click <b>Activate</b>), you will notice that your support and legs will have interference as you have not subtracted materials. To fix that u simply subtract it again by going to <b>Modify > Combine</b>, the <b>Target Body</b> is the leg while the <b>Tool Bodies</b> is both the support. Make sure that the <b>Operation</b> is on <b>Cut</b> and <b>Keep Tools</b> is on. To check that the operation is done properly, you can simply just hide the support by pressing the eye icon on the left side. You should be able to see tabs. I then just did a fillet on the leg component. Once that is done, the only thing left to do is just resize it according to the size of my laptop through <b>Parameters</b> and boom, its done.</p>
+                      
+                      <a href="3d/laptopstand.PNG"><img src="3d/laptopstand.PNG" width=500><br></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <font size=5><u><i><a href="documents/laptoptable.f3d">Laptop Stand File </a></i></u></font><br>
+                      
+                      <p>Here is an animation of my Laptop Stand.</p>
+                      <video controls>
+                        <source src="video/Laptop_Vid.mp4" type="video/mp4" >
+                      </video>
+                      
+ 
+
+            </div>
+        </div>
+        
+        <div id="footer">
+            Copyright &copy; 2020 Muhd Fadhli
+        </div>
+        </div>
+	</body>
+</html>
