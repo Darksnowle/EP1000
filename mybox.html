@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Website</title>
+        <link rel="stylesheet" type="text/css" href="style3.css" />
+	</head>
+
+	<body>
+		<div id="container"> 
+            <div id="header">
+                <h1>My Website</h1>
+            </div>
+        
+        <div id="content">
+            <div id="nav">
+                <h2>Navigation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a  href="info.html">Module Schedule</a></li>
+                        <li><a href="safety.html">FabLab Safety</a></li>
+                        <li><a href="Web.html">Project Management, Web Development and Version Control</a></li>
+                        <li><a class="selected" href="CAD.html">Computer Aided Design</a></li>
+                    </ul>
+                
+            </div>
+                  <div id="main">
+                      <h2><u>Computer Aided Design</u></h2><br>
+                      
+                      <h3><b>My Box</b></h3>
+                      <h4>Front & Back Piece</h4>
+                      <a href="3d_box/front.PNG"><img src="3d_box/front.PNG" width=500><br></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      
+                      <ul>
+                        <li>Create a new component and sketch on the XZ plane </li><br>
+                        <li>Draw a rectangle from origin and dimension it using parameters</li><br>
+                        <li>Draw a vertical construction line on the left side and 2 horizontal ones below. Dimension it to the thickness parameter and draw 2 rectangles between the two lines below and one between the left side and the vertical line. Dimension the length of the rectangles according to the previous design. This is to make the tabs.</li><br>
+                        <li>Mirror the vertical tab to the right side.</li><br>
+                        <li>Extrude the rectangle with the thickness parameter excluding the tabs.</li><br>
+                      </ul>
+                      
+                      <h4>Left & Right Side</h4>
+                       <a href="3d_box/side.PNG"><img src="3d_box/side.PNG" width=500><br></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <ul>
+                        <li>Create a new component and sketch on the left face of the front component.</li><br>
+                        <li>Draw a rectangle and constraint the sides using collinear tool and dimension it accordingly using parameters.</li><br>
+                        <li>Add 2 circles from the left edge of the rectangle with the midpoint of the bigger circle measured at <b>width/6</b> and the smaller one being <b>thickness*5</b></li><br>
+                        <li>Repeat like the previous step on the making of the tabs except for the sides as we can just use the <b>Combine tool</b>.</li><br>
+                        <li>Extrude by <b>thickness</b> parameter</li><br>
+                        <li>Mirror the front and side by first creating a midplane <b>Construct > Midplane</b> on each sides and mirroring them</li><br>
+                        <li>Use <b>Combine tool</b> to easily produce the tabs for the side</li><br>
+                      </ul>
+                      
+                      <h4>Top</h4>
+                       <a href="3d_box/top.PNG"><img src="3d_box/top.PNG" width=500><br></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <ul>
+                        <li>Creat new component and sketch on the face of any sides. For me, i sketched on the top of the left side. </li><br>
+                        <li>Draw a rectangle and collinear constraint it to the sides extrude down by <b>thickness</b>.</li><br>
+                        <li>Use <b>Combine tool</b> and combine the top with the sides.</li><br>
+                        <li>Once done, extrude the previous circle of the sides and join it with the top piece. The distance is the length parameter.</li>
+                      </ul>
+                      
+                      <h4>Bottom</h4>
+                      <a href="3d_box/bottom.PNG"><img src="3d_box/bottom.PNG" width=500><br></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <ul>
+                        <li>Create new component and sketch on any bottome face of any tabs.</li>
+                        <li>Draw a rectangle and constraint it using collinear.</li>
+                        <li>Extrude it using <b>thickness</b> parameter.</li>
+                        <li>Combine the bottom to the sides for th tabs</li>
+                      </ul>
+                      
+                      <h4>Final Product Before and After Parameters</h4>
+                      <table style="width:50%" border=3>
+                          <tr>
+                            <th>5mm thickness</th>
+                            <th>3mm thickness</th>
+                          </tr>
+                          <tr>
+                            <td><a href="3d_box/done.PNG"><img src="3d_box/done.PNG" width=300><br></a></td>
+                              <td><a href="3d_box/done3mm.PNG"><img src="3d_box/done3mm.PNG" width=300><br></a></td>
+                          </tr>
+                      </table><br>
+                      
+
+            </div>
+        </div>
+        
+        <div id="footer">
+            Copyright &copy; 2020 Muhd Fadhli
+        </div>
+        </div>
+	</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Website</title>
+        <link rel="stylesheet" type="text/css" href="style3.css" />
+	</head>
+
+	<body>
+		<div id="container"> 
+            <div id="header">
+                <h1>My Website</h1>
+            </div>
+        
+        <div id="content">
+            <div id="nav">
+                <h2>Navigation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a  href="info.html">Module Schedule</a></li>
+                        <li><a href="safety.html">FabLab Safety</a></li>
+                        <li><a href="Web.html">Project Management, Web Development and Version Control</a></li>
+                        <li><a class="selected" href="CAD.html">Computer Aided Design</a></li>
+                    </ul>
+                
+            </div>
+                  <div id="main">
+                      <h2><u>Computer Aided Design</u></h2><br>
+                      
+                      <u><h3>Slot Box Sample Design</h3></u>
+                      
+                      <h3>Front Side</h3>
+                      
+                      <p>I first started off by creating a new component called <b>front</b> as i will first be working on the front of the box. I then created a new <b>Sketch</b> on the <b>X-Z Plane</b>. After that, I went ahead and drew a rectagle from the origin. I then created parameters (Modify > Change Parameters) for the box <b>length, width, height and thickness of wood used</b>. The measurements can be anything as they a simply just a placeholder for now but I set mine as 100mm, 60mm, 80mm and 3mm respectively. I added one more parameter which is to define the number of tabs we apply on each of the sides. I named the parameters <b>ntabs_l</b> for length, <b>ntabs_w</b> for width and <b>ntabs_h</b> for height. They do not have a unit and is just a number. My parameters looks like this:</p>
+                      <a href="3d_box/parameters.PNG"><img src="3d_box/parameters.PNG" width="800"></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <p>After that, I went ahead and dimensioned the height and length of the rectangle that I made earlier, and drew a perpendicular contruction line down and two across, and dimensioned it to the <b>thickness</b> parameter. These construction lines act as a reference line to in creating the tabs. I sketched a rectangle to the virtical construction line and dimensioned the length between the bottom portion of the rectangle to the origin, and dimensioned it to <b>height/ntabs_h</b>. As for the height of the rectangle itself, i dimensioned it to be identical with the previous dimension which is set as <b>d13</b>. I simply did a similar step for the bottom horizontal construction lines. This is then followed by a mirror of the vertical tabs. My final product with dimensioning will look as such:</p>
+                      <a href="3d_box/frontwithpara.PNG"><img src="3d_box/frontwithpara.PNG" width="800"></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <p>Lastly I ofcourse extruded it using the thickness parameter excluding the tabs, and that is done for the front portion of the box.</p>
+                      
+                      <hr>
+                      
+                      <h3>Left Side</h3>
+                      
+                      <p>Before I start i ofcourse went ahead and created a <b>New Component</b> and named it left. Once that is done, i created a sketch and made sure to sketch it on the face of the left side from the front piece. I did it by holding left click and selecting the face. And the drew a rectangle and collinear it and dimensioned the base with the <b>width</b> parameter. Next I did the same as the front by adding construction lines and tabs. As for the dimensions of the tabs, since we are working on the width, it will therefore be <b>width/ntabs_w</b>. The final product looks like so:</p>
+                      <a href="3d_box/left.PNG"><img src="3d_box/left.PNG" width="800"></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <p>Just like before, I extruded it afterwards except instead of a positive value, <b>thickness</b> is now negative. However, we are not done there. We now have to use the combine command <b>(Modify > Combine)</b> to create the edges. If done correctly, the left and front pieces should combine nicely to look like so:</p>
+                      <a href="3d_box/combined.PNG"><img src="3d_box/combined.PNG" width="800"></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <hr>
+                      
+                      <h3>Right & Back Side</h3>
+                      
+                      <p>Since we already have the front and left side done, we can simply just mirror those bodies. To do so, I first created a midplane <b>(Construct > Midplane)</b> and selecte the two extreme bodies of the front piece first. now i can mirror the the left body <b>(Create > Mirror)</b>. Important to note that the <b>Pattern Type</b> should be set to bodies. Then you can do the mirror. The back piece is created in the same manner but instead, the midplane is created on either the left or the right piece before doing the mirror. Next we have to fix the edges. To do so, combine <b>(Modify > Combine)</b> the back and the side pieces with the back piece being the <b>Tool Bodies</b> and the sides being the <b>Target Body</b>. Once done correctly it should look like this:</p>
+                      <a href="3d_box/box.PNG"><img src="3d_box/box.PNG" width="800"></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                      <hr>
+                      
+                      <h3>Bottom Piece</h3>
+                      
+                      <p>Now we will be working on the bottome piece. I firstly created a new component, renamed it to bottom and sketched it on the surface of one of the tabs. I then went ahead and drew a rectangle and constraint it to the sides of the original box. Next, I extruded it by the parameter <b>thickness</b> once again and once again, used combine to finish off the edges. Once all that is done, the final product should look as such, with all the edges created:</p>
+                      <a href="3d_box/finished.PNG"><img src="3d_box/finished.PNG" width="800"></a>
+                      <p><i>Click to enlarge</i></p>
+                      
+                    
+                      <hr>
+                      
+                      <p>If these instructions were still unclear, there is a video I took as reference in the making of the <u><a href=Fusion 360 Parametric Box for Laser Cutting>Fusion 360 Parametric Box for Laser Cutting</a></u> with a clearer explanation if needed.</p>
+
+ 
+
+            </div>
+        </div>
+        
+        <div id="footer">
+            Copyright &copy; 2020 Muhd Fadhli
+        </div>
+        </div>
+	</body>
+</html>
