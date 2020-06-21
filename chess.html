@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Website</title>
+        <link rel="stylesheet" type="text/css" href="style3.css" />
+	</head>
+
+	<body>
+		<div id="container"> 
+            <div id="header">
+                <h1>My Website</h1>
+            </div>
+        
+        <div id="content">
+            <div id="nav">
+                <h2>Navigation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="info.html">Module Schedule</a></li>
+                        <li><a href="safety.html">FabLab Safety</a></li>
+                        <li><a href="Web.html">Project Management, Web Development and Version Control</a></li>
+                        <li><a href="CAD.html">Computer Aided Design</a></li>
+                        <li><a class="selected" href="3d.html">3D Printing</a></li>
+                    </ul>
+                
+            </div>
+                  <div id="main">
+                      <h2><u>3D Printing (1 June)</u></h2><br>
+                      
+                      <h3>Fusion 360 File Save</h3>
+                      
+                      <p>Before we can start 3D Printing, we first have to convert a a CAD or an <b>f3d</b> file to an <b>STL</b> file. There are multiple ways to do so.</p>
+                      
+                      <table border=2 width=800>
+                        <tr>
+                            <th></th>
+                            <th>Method 1:</th>
+                        </tr>
+                        <tr>
+                            <td><a href="3d_print/stl.png"><img src="3d_print/stl.png" width=300></a></td>
+                            <td>
+                                <p>Direct Save</p>
+                                <p>=> Object Browser > Select Object > Right Click > Save as STL</p>
+                                <p>=> Select folder and rename</p>
+                            </td>
+                        </tr>
+                      </table>
+                      <table border=2 width=800>
+                        <tr>
+                            <th></th>
+                            <th>Method 2:</th>
+                        </tr>
+                        <tr>
+                            <td><a href="3d_print/3dstl.png"><img src="3d_print/3dstl.png" width=300></a>
+                            </td>
+                            <td>
+                                <p>By 3D Print</p>
+                                <p>=> Tools > Make > 3D Print</p>
+                            </td><br>
+                        </tr>
+                        <tr>
+                            <td><a href="3d_print/mesh.png"><img src="3d_print/mesh.png" width=300></a>
+                            </td>    
+                            <td><p>*At the 3D Print Menu</p>
+                                <p>=> Select Object</p>
+                                <p>=> Check <b>Preview Mesh</b></p>
+                                <p>=> <b>Refinement</b> set to Medium</p>
+                                <p>=> Output > Send to 3D Print Utility is unchecked</p>
+                            </td>
+                        </tr>
+                      </table>
+                      
+                    <h3>Ultimaker Cura</h3>
+                      
+                      <p>Once that is done, we can now proceed to Cura and open our <b>STL</b> file. The printer type is <b>Ultimaker 2+</b> with a nozzle size of 0.4 mm and with PLA filament. When that is opened you will notice a couple of things on the left side of the screen. You have the <b>Move</b>, <b>Scale</b>, <b>Rotate</b>, <b>Mirror</b>, <b>Per Model Settings</b> and the <b>Support Blocker</b>. The first thing i did was make my chess piece upright by using the <b>Rotate</b> tool or simply just by pressing <b>R</b>. Then I can start adjusting the different settings.</p>
+                      
+                      <p>We were assigned to create a table with at least 3 different settings comparing the print of the knight using changes to the <b>Wall Thickness</b> (typical 1mm), <b>Layer Height</b> (typical 0.2mm), <b>Infill</b> (typical 15%), <b>Support</b> and <b>Bed Adhesion</b>. All these settings can be found under <b>Print Settings > Custom</b>. We then have to determine the approximate print times and amount of filament for each of the settings, include them in our table.</p>
+                      <a href="3d_print/customsettings.PNG"><img src="3d_print/customsettings.PNG" width=500></a>
+                      
+                      <p><i> * Note that only one change is done at a time with the other settings set at default *</i></p>
+                      
+                       <table border=2>
+                        <tr>
+                            <th>Wall Thickness</th>
+                            <th>0.5mm</th>
+                            <th>1.0 mm</th>
+                            <th>1.5 mm</th>
+                        </tr>
+                         <tr>
+                            <td>Print Time</td>
+                            <td>16 mins</td>
+                            <td>17 mins</td>
+                            <td>17 mins</td>
+                        </tr>
+                        <tr>
+                            <td>Amount of Filament</td>
+                            <td>1g</td>
+                            <td>2g</td>
+                            <td>2g</td>
+                        </tr>
+                      </table><br>
+
+                      <table border=2>
+                        <tr>
+                            <th>Layer Height</th>
+                            <th>0.1 mm</th>
+                            <th>0.2 mm</th>
+                            <th>0.3 mm</th>
+                        </tr>
+                        <tr>
+                            <td>Print Time</td>
+                            <td>33 mins</td>
+                            <td>17 mins</td>
+                            <td>11 mins</td>
+                        </tr>
+                        <tr>
+                            <td>Amount of Filament</td>
+                            <td>2g</td>
+                            <td>2g</td>
+                            <td>2g</td>
+                        </tr>
+                      </table><br>
+                      
+                      <table border=2>
+                        <tr>
+                            <th>Infill</th>
+                            <th>0 %</th>
+                            <th>15 %</th>
+                            <th>0.3 mm</th>
+                        </tr>
+                        <tr>
+                            <td>Print Time</td>
+                            <td>16 mins</td>
+                            <td>17 mins</td>
+                            <td>17 mins</td>
+                        </tr>
+                        <tr>
+                            <td>Amount of Filament</td>
+                            <td>2g</td>
+                            <td>2g</td>
+                            <td>2g</td>
+                        </tr>
+                      </table><br>
+                      
+                      <table border=2>
+                        <tr>
+                            <th>Support</th>
+                            <th>With</th>
+                            <th>Without</th>
+                        </tr>
+                        <tr>
+                            <td>Print Time</td>
+                            <td>17 mins</td>
+                            <td>16 mins</td>
+                        </tr>
+                      </table><br>
+                      
+                      <table border=2>
+                        <tr>
+                            <th>Bed Adhesion</th>
+                            <th>Brim</th>
+                            <th>None</th>
+                        </tr>
+                          
+                        <tr>
+                            <td>Print Time</td>
+                            <td>17 mins</td>
+                            <td>16 mins</td>
+                        </tr>
+                          
+                        <tr>
+                            <td>Amount of Filament</td>
+                            <td>2g</td>
+                            <td>2g</td>
+                        </tr>
+                      </table>
+                      
+                      <hr>
+                      
+                    
+                      
+                      
+            </div>
+        </div>
+        
+        <div id="footer">
+            Copyright &copy; 2020 Muhd Fadhli
+        </div>
+        </div>
+	</body>
+</html>
