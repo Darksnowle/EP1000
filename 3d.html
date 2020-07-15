@@ -22,13 +22,14 @@
                         <li><a href="Web.html">Project Management, Web Development and Version Control</a></li>
                         <li><a href="CAD.html">Computer Aided Design</a></li>
                         <li><a class="selected" href="3d.html">3D Printing</a></li>
+                        <li><a href="laser.html">Laser Cutting</a></li>
                     </ul>
                 
             </div>
                   <div id="main">
-                      <h2><u>3D Printing (1 June)</u></h2><br>
+                      <h1><u>3D Printing (1 June)</u></h1><br>
                       
-                      <h3>Introduction</h3>
+                      <h2>Introduction</h2>
                       
                       <p>3D printing or additive manufacturing is a process of making three dimensional solid objects from a digital file.
                           The creation of a 3D printed object is achieved using additive processes. In an additive process an object is created by laying down successive layers of material until the object is created. Each of these layers can be seen as a thinly sliced horizontal cross-section of the eventual object.
@@ -48,7 +49,7 @@
                         <li>prototypes do not have the strength of actual products</li>
                       </uL>
                       
-                      <h3>Process of 3D Printing</h3>
+                      <h2>Process of 3D Printing</h2>
                       
                       <p><b>The process of 3D printing can be broken down as follows:</b></p>
                       <ol>
@@ -58,14 +59,14 @@
                         <li>Printing of 3D object</li>
                       </ol>
                       
-                      <h3>Types of 3D Printers</h3>
+                      <h2>Types of 3D Printers</h2>
                       
                       <p><b>There are many types of 3D printers available with different Advantages and Disadvanteges but the ones below are the more commonly used ones:</b></p>
-                      <uL>
+                      <ul>
                         <li>FFF (Fused Filament Fabrication) where a filament is heated/fused and deposited a layer at a time.</li>
                         <li>SLA (Stereolithography) uses a photochemical process which places a chemical/resin and uses a light source to harden each layer.</li>
                         <li>SLS (Selective Layer Sintering) is a technique that uses a laser as a power source to sinter/fuse powdered material at points to create a solid structure.</li>
-                      </uL>
+                      </ul>
                       
                       <p>We are mainly using the <b>FFF</b>. There are two types of <b>FFF</b> printers.</p>
                       <ul>
@@ -79,7 +80,112 @@
                       <a href="3d/printer.jpg"><img src="3d/printer.jpg" width=400></a>
                       <h4><i>Click to enlarge</i></h4>
                       
-                      <h3>Cura</h3>
+                      <h2>Characteristics of a 3D printer</h2>
+                      
+                      <p>We need to understand the characteristics of our 3D printers before we can start using the slicer software. It helps in the tuning of the software parameters which allows us to have finer, faster and/or stronger prints.</p><br>
+                      
+                      <p>Some characteristics include:</p>
+                      <ul>
+                          <b><li>Layer Height (extruded filament thickness):</li></b>
+                          <p>The height of each printed layer of the 3D print. Thinner layers give finer, smoother surface and more accurate prints but takes longer to print. Ranges from 0.1~0.4mm for a 0.4 nozzle (typical 0.2mm). It also affects the resolution, speed and smoothness of print.</p>
+                          
+                          <table border=2>
+                            <tr>
+                                <th><a href="3d/layerHeight.png" ><img src="3d/layerHeight.png" width=300></a></th>
+                            </tr>
+                              <tr>
+                                  <td>Layer height</td>
+                              </tr>
+                          </table><br>
+                          
+                          <b><li>Wall Thickness:</li></b>
+                          <p>Controls number of strands required for the thickness of the wall. If the Layer Height = 0.2mm, then a wall thickness of 1mm will require 5 strands laid side-by-side. Thicker walls give stronger prints but takes longer to print. Typical wall thickness is min 0.8mm.</p>
+                          
+                          <table border=2>
+                            <tr>
+                                <th><a href=3d/wallThickness.png ><img src=3d/wallThickness.png width=300></a></th>
+                            </tr>
+                              <tr>
+                                  <td>Wall Thickness</td>
+                              </tr>
+                          </table><br>
+                          
+                          <b><li>Infill Percentage:</li></b>
+                          <p>Controls the amount of material in the internal cavities. Higher infills give more strength, but take longer to print. You can select different infill patterns. Typical infills 10~18%.</p>
+                          
+                          <table border=2>
+                            <tr>
+                                <th><a href=3d/infill.png ><img src=3d/infill.png width=300></a></th>
+                            </tr>
+                              <tr>
+                                  <td>Infill</td>
+                              </tr>
+                          </table><br>
+                          
+                          <b><il>Bridging:</il></b>
+                          <p>Refers to the prints between 2 points that have no connection to each other where there is no layer below the area between the two points when bridging. Hence, printing must be done in the air so that the gap can be bridged. There is a limit before the print fails and sagging strands appear. The maximum distance for each printer must be tested. This also affects the quality of the print.</p>
+                          
+                          <table border=2>
+                            <tr>
+                                <th><a href=3d/bridging.jpg ><img src=3d/bridging.jpg width=300></a></th>
+                            </tr>
+                              <tr>
+                                  <td>Bridging</td>
+                              </tr>
+                          </table><br>
+                          
+                          <b><li>Overhang Limit:</li></b>
+                          <p>3D printers cannot print on "air" so there is a limit. There is a limit where there is insufficient support to handle the print and it is usually above 45 degrees. We can perform a test print to determine your printer’s limits (You can find examples in Thingiverse!) </p>
+                          
+                          <table border=2>
+                            <tr>
+                                <th><a href=3d/overhang.png ><img src=3d/overhang.png width=300></a></th>
+                            </tr>
+                              <tr>
+                                  <td>Overhang</td>
+                              </tr>
+                          </table><br>
+                          
+                          <b><li>Platform Adhesion:</li></b>
+                          <p>The print bed is usually heated to improve adhesion. Sometimes, the print object requires help in adhering to the print bed. Skirts are used to provide an outline - no adhesion. Brims allow some adhesion to the print perimeter. Rafts are full platforms on which the 3D print is placed. Print adhesion is onto the raft instead of the bed.</p>
+                          
+                          <table border=2>
+                            <tr>
+                                <th><a href=3d/platformAdhesion.png ><img src=3d/platformAdhesion.png width=300></a></th>
+                            </tr>
+                              <tr>
+                                  <td>Platform Adhesion</td>
+                              </tr>
+                          </table><br>
+                          
+                          <b><li>Supports:</li></b>
+                          <p>They are used to aid in printing overhangs and make impposible prints possible. Supports are removed after the print is complete. They add to the print time as well as the touch-up and finishing time to the model. Orientation of the model helps in the determining of supports.</p>
+                          
+                          <table border=2>
+                            <tr>
+                                <th><a href="3d/supportsOn.png" ><img src="3d/supportsOn.png" width=300></a></th>
+                                <th><a href=3d/supportsOn.png ><img src="3d/supportsOff.png" width=300></a></th>
+                            </tr>
+                              <tr>
+                                  <td>Supports On</td>
+                                  <td>Supports Off</td>
+                              </tr>
+                          </table><br>
+                          
+                          <b><li>Object Placement & Orientation</li></b>
+                          <p>The placement of the object plays an important role in the success of the print. Changing the orientation can improve the adhesion and limit the use of supports. Use the <b>Rotate</b> feature to change the orientation and the <b>Place on bed</b> feature to ensure proper placement on the print bed. </p>
+                          
+                          <table border=2>
+                            <tr>
+                                <th><a href="3d/orientation.png" ><img src="3d/orientation.png" width=300></a></th>
+                            </tr>
+                              <tr>
+                                  <td>Object Placement & Orientation</td>
+                              </tr>
+                          </table><br>
+                          
+                          
+                      </ul>
 
                        <u><a href="chess.html"><font size=6>My Knight Piece Assignment</font></a></u>
 
