@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>My Website</title>
+		<title>Fadhli's Website</title>
         <link rel="stylesheet" type="text/css" href="style3.css" />
 	</head>
 
 	<body>
 		<div id="container"> 
             <div id="header">
-                <h1>My Website</h1>
+                <h1>Fadhli's Website</h1>
             </div>
         
         <div id="content">
@@ -23,17 +23,168 @@
                         <li><a href="CAD.html">Computer Aided Design</a></li>
                         <li><a href="3d.html">3D Printing</a></li>
                         <li><a class="selected" href="laser.html">Laser Cutting</a></li>
+                        <li><a href="electronics.html">Electronics</a></li>
+                        
                     </ul>
                 
             </div>
                   <div id="main">
                       <h1><u>Laser Cutting (4 June)</u></h1><br>
                       
+                      <p>Laser cutting is a process where material is placed in the X-Y plane and a <a href="https://en.wikipedia.org/wiki/Laser">LASER (Light Amplification by Stimulated Emission of Radiation)</a> is moved across the profile to be cut out. It can be focused to a tight spot, which allows the beam to "cut" at the position.</p>
                       
+                      <p>The high intensity of the beam causes the material to be vaporised (cut away).Since the light can be focused, a very thin cut is made. Electronics and machine control make the cut precise and repeatable.The laser can be programmed to have a continous wave or pulsed repeatedly to produce the cut.</p>
+                      
+                      <p>The process of laser cutting is controlled by:</p>
+                      <ol>
+                        <li><b>The speed of the movement of the laser</b>
+                            <ul>
+                                <li>Slow speeds allow the laser more time over the material and cuts deeper and more intensely. It also causes charring of material.</li>
+                            </ul>  
+                        </li><br>
+                          
+                          <li><b>The intensity of the laser</b>
+                            <ul>
+                                <li>Higher intensities of the laser can cut deeper and are sometimes required as the material is more dense than others.</li>
+                            </ul>
+                        </li><br>  
+                          
+                        <li><b>The number of pulses per second</b>
+                            <ul>
+                                <li>Most lasers are pulsed. The higher the number of pulses per second give higher intensities and prolonged exposure to the laser.</li>
+                                <li>Higher pulsing reates are required for dense material.</li>
+                            </ul>  
+                        </li><br>
+                          
+                        <li><b>Most lasers settings come with recommendations from the manufacturer or the Technicians and are dependent upon:</b>
+                            <ul>
+                                <li>The material (e.g. wood, acrylic, paper)</li>
+                                <li>The thickness of the material</li>
+                                <li>The color/coloration of the material</li>
+                            </ul>  
+                        </li><br>
+                      </ol>
                      
 
+                      <h2>Preparing Fusion 360 Models</h2>
                       
+                      <p>When designing in Fusion 360, we have the ability to model an object in 3 dimensions, check for joints and obstructions and aesthetics of the model. However, when we decide to laser cut the object we need to obtain the profile of the object and export it in a format that the cutting software recognises. This applies to other design software as well e.g. <b>Illustrator, Rhino.</b> </p>
                       
+                      <p>The preferred file formats required for laser cutting are:</p>
+                      <ul>
+                        <li><a href="https://en.wikipedia.org/wiki/AutoCAD_DXF">AutoCAD DXF (Data eXchange Format)</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/PDF">PDF (Portable Document Format)</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG (Scalable Vector Graphics)</a></li>
+                      </ul>
+                      
+                      <p>We will be using CorelDraw Graphics suite to check and finalise the cuts, which is able to handle both Vector and Raster images suitable for cutting and engraving. This is traditionally the recommended software though it is fast being replaced by Inkscape, RDWorks (for China Lasers) because of its costs.You can also use Open Source software to import, check and layout your DXF files before doing a final import to CorelDraw such as LibreCAD.</p>
+                      
+                      <h2>Obtaining DXF Profiles</h2>
+                      <ol>
+                          <li><p>To create a 2D DXF file, you first have to select on the body you want to extract the profile. You then have to make a create a new sketch <b>(Create > Create Sketch)</b>. It is <b>IMPORTANT</b> to click on the profile again until it turns blue before clicking on Finish Sketch.</p><br>
+                          <a href="laser_cutting/selectedplane.png"><img src="laser_cutting/selectedplane.png" width=300></a></li>
+                          <p><i>Click to enlarge</i></p>
+                          
+                            
+                          
+                          <li><p>Your sketch should now be located in the <b>Object Browser > Sketches</b>. Rename it accordingly (e.g FRONT.DXF). Once that is done, right click the sketch that you just renamed and click on <b>Save As DXF</b>.</p><br>
+                            <a href="laser_cutting/safeasdxf.png"><img src="laser_cutting/safeasdxf.png" width=300></a></li>
+                          <p><i>Click to enlarge</i></p>
+                          
+                          <li>Finally, you just have to repeat the same process for all the other bodies. You do not have to do it for mirrored bodies as, obviously, it is mirrored therefore doing it for the original body will do.</li>
+                          
+                      </ol>
+                      
+                      <h2>Checking and Preparing of Work</h2>
+                      
+                      <p>It is important to check your DXF files before coming down to the laser cutter to cut your work. This is because</p>
+                      <ul>
+                        <li>Sometimes the profiles are not exported correctly</li>
+                        <li>You will need time to layout your profiles to save space on the material to be cut</li>
+                        <li>Laser cutter time is expensive (approx $70/hr). You don’t want to spend that time correcting your layout or finding out that your profiles have errors.</li>
+                      </ul>
+                      
+                      <p>The software used on most Laser cutters is CorelDraw (which is a licensed product) that comes as the default. However, CorelDraw accepts a large number of Vector/Raster formats which allow you to import. The more common formats are</p>
+                      <ul>
+                        <li>AutoCAD DXF (from most CAD software systems)</li>
+                        <li>PDF (Adobe Illustrator)</li>
+                        <li>SVG</li>
+                      </ul>
+                      
+                      <p>You can use the following Open Source software to import, check and layout your DXF files before doing a final import to CorelDraw:</p>
+                      <ul>
+                        <li><a href="https://librecad.org/">LibreCAD</a></li>
+                        <li><a href="https://inkscape.org/">InkScape</a></li>
+                      </ul><br>
+                      
+                      <b><p>Below are steps as to how to use both LibreCAD and Inkscape to import your DXF files for checking and layout. </p></b>
+                      
+                      <ol>
+                        <li><h3>LibreCAD</h3></li>
+                        <a href="laser_cutting/libre.PNG"><img src="laser_cutting/libre.PNG" width=500></a>
+                          
+                        <p>LibreCAD is an open source CAD drawing program. You can use it to create 2D profiles and save it to DXF files. It’s default file format is .DXF. To import your files, you first have to open a new drawing by clicking on <b>File > New</b>. Next, to import your files, click on <b>File > Import > Block</b> and select your .DXF files. Keep adding the profiles. You can layout your laser cut profile using this software. Any <b>lines/graphics</b> drawn will be cut out by the laser cutter. Once that is done, check your profiles and save your work as another DXF file which would be needed to be imported to CorelDraw later.</p>
+                          
+                          
+                        <li><h3>Inkscape</h3></li>
+                        <img src="laser_cutting/inkscape.PNG" width=500 border=2>
+                          
+                        <p>To import your files on inkscape, you first select a file size that you can work on (e.g. A4 or A3) by clicking on <b>File > Document Properties</b>. Then, click on <b>File > Import</b> to select your DXF file. Choose Manual Scale when importing the file. Then manually layout the imported item on the page and repeat for all your other files. Check your work and then export it as DXF, PDF or SVG format, to be sent to CorelDraw. </p>
+                      </ol>
+                      
+                      <hr>
+                      
+                      <h2>CorelDraw</h2>
+                      
+                      <p>Transfer your DXF layout to CorelDraw as follows:</p>
+                      <a href="laser_cutting/corelimportdxf.png"><img src="laser_cutting/corelimportdxf.png" width=500></a>
+                      
+                      <ol>
+                        <li>Create a new CorelDraw file (the default template of 40x28 inch or 1017x711 mm, the size of the laser cutter, is available).</li>
+                        <li>File > Import > "Select DXF file"</li>
+                        <li>In the “Import AutoCAD File” popup. ensure that the units are Metric and the Scaling is 1:1</li>
+                        <li>Place the layout on the drawing.</li>
+                      </ol>
+                      
+                      <p>You can also import SVG, DXF and other file formats.</p><br>
+                      
+                      <a href="laser_cutting/profilelayout.png"><img src="laser_cutting/profilelayout.png" width=500></a>
+                      
+                      <ul>
+                        <li>Profiles are laid out to minimize material waste.</li>
+                        <li>You can also arrange your profiles to speed up the cutting process</li>
+                        <li>Check that the profiles are correct before cutting</li>
+                        <li>To cut, click “Print”</li>
+                      </ul>
+                      
+                      <hr>
+                      
+                      <h2>Kerf</h2>
+                      <p>When a laser cuts through material, some material is removed in the process. The material that is removed is called the Kerf (a slit or notch made by a saw or cutting torch).</p>
+                      
+                      <ul>
+                        <li>The kerf in laser cutters is very small (approx. 0.3 ~ 0.8 mm) depending on the material and how it is cut.</li>
+                        <li>If we can calculate the Kerf (through experimentation) we can make adjustments to ensure that the cuts are press-fit.</li>
+                        <li>Adjusments are usually made by</li>
+                          <ul>
+                            <li>decreasing the size of the “holes”</li>
+                            <li>increasing the size of the “tabs”</li>
+                          </ul>
+                        <li>Can be done parametrically by adding an adjustment value to compensate for the kerf.</li>
+                      </ul>
+                      
+                      <a href="laser_cutting/kerf.png"><img src="laser_cutting/kerf.png" width=500></a>
+                      
+                      <ul>
+                        <li>Kerf is the material removed when lasercutting.</li>
+                        <li>Assume a profile 20x20mm is cut.</li>
+                        <li>After cutting the cut piece is measured (still 20x20mm) and the hole is measured (20.8x20.8mm).</li>
+                        <li>The hole is larger because material has to be removed in the cut. The amount of material removed is called the Kerf.</li>
+                          <ul>
+                            <li>In this case, Kerf = (20.8 - 20)/2 = 0.4mm</li>
+                          </ul>
+                        <li>Hence to make tight joints, you have to compensate for this kerf.</li>
+                      </ul>
 
             </div>
         </div>
