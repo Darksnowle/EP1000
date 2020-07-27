@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Website</title>
+        <link rel="stylesheet" type="text/css" href="style3.css" />
+	</head>
+
+	<body>
+		<div id="container"> 
+            <div id="header">
+                <h1>Fadhli's Website</h1>
+            </div>
+        
+        <div id="content">
+            <div id="nav">
+                <h2>Navigation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="info.html">Module Schedule</a></li>
+                        <li><a href="safety.html">FabLab Safety</a></li>
+                        <li><a href="Web.html">Project Management, Web Development and Version Control</a></li>
+                        <li><a href="CAD.html">Computer Aided Design</a></li>
+                        <li><a href="3d.html">3D Printing</a></li>
+                    </ul>
+                
+            </div>
+                  <div id="main">
+                      <h1><u>Programming</u></h1><br>
+                      
+                      <h2>Introduction</h2>
+        
+                      <p>A programming language is used to convey the Progammer’s thoughts into instructions for the microprocessor to understand. To translate english-like instructions to machine code, a middile-ground is required, which is done so by computer programming language. They can be understood by humans, and can also easily and accurately convert the language into binary by compiling the code for the microprocessor to understand. Such programming languages include Python and C/C++. It is important that the instructions of the programmer be conveyed accurately into the programming language as the microprocessor ONLY follows the instructions-to-the-letter by the programming language. If your code is wrong/has errors, the microprocessor reproduces these errors. There are 3 main types of errors:</p>
+                      
+                      <ul>
+                        <li><b>Syntax Errors</b></li>
+                          <ul>
+                            <li>not following the rules (syntax) of the programming language</li>
+                            <li>easily caught by the compiler</li>
+                            <li>most common of all errors made</li> 
+                          </ul>
+                          
+                          <li><b>Logical Errors</b></li>
+                          <ul>
+                            <li>Errors made by the programmer in developing the logic of the program. For example:</li>
+                              <ul>
+                                <li>incrementing instead of decrementing values</li>
+                                <li>using imperial units instead of metric</li>
+                              </ul>
+                            <li>Hardest to catch, only done by testing the code thoroughly</li>
+                          </ul>
+                          
+                          <li><b>Semantic Errors</b></li>
+                          <ul>
+                            <li>improper use of “program statements”. For example:</li>
+                              <ul>
+                                <li>using a loop that cannot end</li>
+                                <li>using an incorrect function or statement</li>
+                              </ul>
+                            <li>Not easily identified, rare.</li>
+                          </ul>
+                      </ul>
+                      
+                      <hr>
+                      
+                      <h2>Structured Programming</h2>
+                      
+                      <p>Structured programming can reduce the occurance of logical errors in any programming language. It is a technique that specifies the way/method of writing code, which is easy to understand and follow and produces good results. It allows us to control the flow of execution and documents our code, making it easier for us to check and understand. It is made up of <b>THREE</b> main structures</p>
+                      
+                      <ol>
+                          <li><b>Sequence</b></li>
+                          <ul>
+                            <li>Do one task at a time, one after another</li>
+                            <li>A task can be made up of many tasks, instructions or structures</li>
+                            <li>Do it in the correct order and your execution flow will be correct</li>
+                          </ul><br>
+                          
+                          <li><b>Selection</b></li>
+                          <ul>
+                            <li>Allows you to choose one of two options based on a test or question</li>
+                            <li>If a condition is met, then do Task A else/otherwise do Task B</li>
+                          </ul><br>
+                          
+                          <li><b>Repetition</b></li>
+                          <ul>
+                            <li>Allow repetition of a task, instruction(s) or strucfure based on a condition. It can be repeated none, once or many times.</li>
+                            <li>Also known as conditional looping.</li>
+                          </ul>
+                      </ol>
+                    
+                      <a href="programming/structured_programming.png"><img src="programming/structured_programming.png" width=500 border=1></a>
+                      
+                      <hr>
+                      
+                      <h2>Arduino</h2>
+                      
+                      <p>The Arduino IDE (Integrated Development Environment) is a cross-platform application (runs on Windows, MacOS and Linux) which allows you to enter the source code for your application programming. The IDE includes</p>
+                      <ul>
+                        <li>a code editor featuring syntax highlighting and bracket matching</li>
+                        <li>one-click compliation and uploading of programs to the Ardunio boards</li>
+                        <li>supports C and C++ using special code structuring</li>
+                      </ul>
+                      
+                      <p><b>Sketch</b></p>
+                      <ul>
+                        <li>A Sketch is a program written with the Arduino IDE</li>
+                        <li>Sketches are saved on the development systems as text files with the extension <b>.ino</b></li>
+                        <li>Each sketch is created in a folder of the same name on the development system</li>
+                        <li>A minimal Arduino sketch in C/C++ consists of only two functions:</li><br>
+                          <ul>
+                              <li><b>setup()</b></li>
+                              
+                              <ul>
+                                <li>This function is called only once when the sketch starts after power-up or reset.</li>
+                                <li>This function is used to initialize variables, I/O pin modes and other libraries that are used.</li>
+                              </ul><br>
+                              
+                              <li><b>loop()</b></li>
+                              <ul>
+                                <li>After the setup() function ends, the loop() function is called.</li>
+                                <li>This function is executed repeatedly until the board is powered off.</li>
+                              </ul>
+                          </ul><br>
+                          
+                        <li>Heres an example of a <b>Blink</b> program</li><br>
+                         <a href="programming/blink.PNG"><img src="programming/blink.PNG" width=500></a>
+                      </ul>
+                    
+                      <p><b><u>Notes:</u></b></p>
+                      
+                      <p><b>#define LED_PIN 13</b></p>
+                      
+                      <ul>
+                        <li>used to “define” or “declare” to the pre-processor that whenever you see the words LED_PIN, replace it by the number 13.</li>
+                        <li>the pre-processor is a program in the Arduino IDE that runs just before the compiler, instructions to the pre-processor are called “pre-processor” commands.</li>
+                        <li>not a program statement therefore doesn't require ";"</li>
+                      </ul><br>
+                      
+                      <p><b>void setup()</b></p>
+                      <ul>
+                        <li>any words ending with "()" or "(...)" are functions</li>
+                        <li>they are blocks of code that, after execution, return a value.</li>
+                        <li><i>void</i> infront of <i>setup()</i> indicates that the function does not retunr any values</li>
+                        <li>“{“  “}” are used to group statements. A group of statements is called a <i>block</i>.</li>
+                      </ul><br>
+                      
+                      <p><b>// Pin number attached …</b></p>
+                      
+                      <ul>
+                        <li>this is a comment, also created using /* … */, which are ignored by the compiler</li>
+                        <li>helps the code become readable and understandable.</li>
+                      </ul>
+                      
+                      
+                      
+                      
+                      <h2>Arduino Programming Language</h2>
+                      <ul>
+                        <li>closely resembles the C/C++ syntax.</li>
+                        <li>it is broken up into 3 parts</li>
+                          <ul>
+                              <li>functions</li>
+                              <li>vaiables</li>
+                              <li>structure</li>
+                          </ul>
+                        <li>These words should be considered as “keywords” and not used to define variables, constants, structures or functions in your program</li>
+                      </ul><br>
+                      
+                    <h2>Data Types</h2>
+                      <ul>
+                        <li>The Arduino language borrows from the data types in C/C++</li>
+                        <li>A data type determines the amount of memory required to store the bit pattern and how the storage is interpreted</li>
+                      </ul>
+                      
+                      <table border=1 width=800>
+                        <tr>
+                            <th>Data Type</th>
+                            <th>What it Stores</th>
+                            <th># of bytes</th>
+                        </tr>
+                          
+                          <tr>
+                            <td>void</td>
+                            <td>used only in function declarations to indicate that the function does not return any value	</td>
+                            <td></td>
+                          </tr>
+                          
+                          <tr>
+                            <td>boolean</td>
+                            <td>stores true or false</td>
+                            <td>1</td>
+                          </tr>
+                          
+                          <tr>
+                              <td>char</td>
+                              <td>stores 1 character e.g. ‘A’</td>
+                              <td>1</td>
+                          </tr>
+                          
+                          <tr>
+                            <td>unsigned char</td>
+                            <td>stores numbers from 0 to 255, no negatives</td>
+                            <td>1</td>
+                          </tr>
+                          
+                          <tr>
+                            <td>byte</td>
+                            <td>equivalent to unsigned char</td>
+                            <td>1</td>
+                          </tr>
+                          
+                          <tr>
+                            <td>int</td>
+                            <td>whole numbers from -32766 to +32767 (depends on processor)</td>
+                            <td>2</td>
+                          </tr>
+                          
+                          <tr>
+                            <td>unsigned int</td>
+                            <td>whole numbers from 0 to +65535</td>
+                            <td>2</td>
+                          </tr>
+                          
+                          <tr>
+                            <td>word</td>
+                            <td>equivalent to unsigned int</td>
+                            <td>2</td>
+                          </tr>
+                          
+                          <tr>
+                            <td>long</td>
+                            <td>extended size whole number -2,147,483,648 to 2,147,483,647</td>
+                            <td>4</td>
+                          </tr>
+                          
+                          <tr>
+                            <td>short</td>
+                            <td>equivalent to unsigned int</td>
+                            <td>2</td>
+                          </tr>
+                          
+                          <tr>
+                            <td>float</td>
+                            <td>numbers with decimal point, ranging from -3.4028235E+38 to 3.4028235E+38</td>
+                            <td>4</td>
+                          </tr>
+                          
+                          <tr>
+                            <td>double</td>
+                            <td>equivalent to float</td>
+                            <td>4</td>
+                          </tr>
+                      </table>
+                      
+                      <p><b><u>Notes:</u></b></p>
+                      
+                      <ul>
+                        <li>int is dependent on the microcontroller used e.g. ATMega are 8-bit processors, which use 16-bits to define an int</li>
+                      </ul>
+                      
+                    <h2>Constants</h2>
+                      <ul>
+                        <li>has an identifier as well as a value (which does not change)</li>
+                        <li>usually written in UPPERCASE</li>
+                          <li><b>#define</b>does not declare a constant, it is a pre-processor command</li>
+                      </ul>
+                      
+                      <a href="programming/constant.PNG"><img src="programming/constant.PNG" width=500></a>
+                      
+                      <h2>Variables</h2>
+                      <ul>
+                        <li>indicates/points to a storage address used to store data of a specific data type</li>
+                        <li><b>int "name"</b> points to an address location which has 2 bytes and is capable of storing an integer</li>
+                          <li>exists only in the region in which they are declared, called a <b>scope</b></li>
+                        <li>There are 3 types of variable scopes:</li>
+                          <ul>
+                              <li><b>Local variables:</b> they are inside a function or a block and are only used by the statements within the block.</li>
+                              <ul>
+                              <li>Example:</li>
+                              <a href="programming/local.PNG"><img src="programming/local.PNG" width=500></a>
+                             </ul><br>
+                              
+                              <li><b>Global Variables:</b> they are defined outside the functions, usually at the top and is also visible throughout program. </li>
+                              
+                              <ul>
+                                <li>Example:</li>
+                                  <a href="programming/global.PNG"><img src="programming/global.PNG" width=500></a>
+                              </ul>
+                          </ul>
+                      </ul>
+                      
+                      <h2>Operators</h2>
+                      
+                      <ul>
+                        <li>Operators are symbols that tells the compiler to perform a specific mathematical or logical operation with the operands.</li>
+                        <li>Commonly used operators are</li>
+                          <ul>
+                            <li><b>Arithmetic</b></li>
+                              <ul>
+                                <li>"=" assignment, "+" add, "-" subtract, "*" multiply, "/" divide</li>
+                                <li>with the exception of - negation, arithmetic operators require 2 operands</li>
+                                <li>gives a numerical result</li>
+                              </ul><br>
+                              
+                              <li><b>Comparison</b></li>
+                              <ul>
+                                <li> == equality, != not equal to, > greater than, < less than </li> 
+                                <li>gives a logical result (true or false)</li>
+                              </ul><br>
+                              
+                              <li>><b>Boolean Operators</b></li>
+                              <ul>
+                                <li>"&&" AND, "||" OR, "!" logical NOT</li>
+                                <li>gives a logical result</li>
+                              </ul><br>
+                              
+                              <li><b>Bitwise Operators</b></li>
+                              <ul>
+                                <li>"&" and, "|" or, "!" not/inverse, "<<" shift left, ">>" shift right</li>
+                                <li>changes the bit pattern of the operator</li>
+                              </ul>
+                          </ul><br> 
+                      </ul>
+                      
+                      <h2>Control Statements</h2>
+                      
+                      <ul>
+                        <li>Control statements provide a means of decision making</li>
+                        <li>A condition is first tested. If the result is true, then the code for Task A is executed, else the code for Task B</li>
+                          <li>Control statements are provided using the <b>if-then-else</b> statement</li>
+                        <li>The condition statement must return a boolean result</li>
+                        <li><b>if</b> statements can be nested</li>
+                      </ul>
+                      
+                      <a href="programming/ifelse.PNG"><img src="programming/ifelse.PNG" width=500></a>
+                      
+                      <h2>Loops</h2>
+                      
+                      <ul>
+                        <li>Loops provide a means of performing a task or executing a block of statements repeatedly</li>
+                        <li>The following loops are provided and should be used according to the roles applied to them for structured programming</li><br>
+                          
+                          <ul>
+                            <li><b>while()</b></li><br>
+                              <ul>
+                                <li>repeats none, once or many times</li>
+                                <a href="programming/while.PNG"><img src="programming/while.PNG" width=500></a>
+                              </ul><br>
+                              
+                              <li><b>do...while()</b></li><br>
+                              <ul>
+                                <li>repeats once or many times</li>
+                              <a href="programming/dowhile.PNG"><img src="programming/dowhile.PNG" width=500></a>
+                              </ul><br>
+                              
+                              <li><b>for()</b></li><br>
+                              <ul>
+                                <li>repeats exactly a specified number of times</li>
+                                  <a href="programming/for.PNG"><img src="programming/for.PNG" width=500></a>
+                              </ul>
+                              
+                            <li>the condition of the loop is controlled by a boolean expression</li>
+                            <li>If the trigger to the expression is not changed within the loop body, you will end up with an endless repeating loop</li>
+                          </ul>
+                      </ul>
+                      
+                    <h2>Functions</h2>
+                    <ul>
+                        <li>Functions are blocks of code that perform a specific task</li>
+                        
+                        <li>Allows the code to be modular, organizing a task of many small tasks into a larger idea. This technique is called <b>abstraction</b>. It can also be repeated in a program or re-used without writing.</li>
+                        
+                        <li><b>For example,</b>
+                            <ul>
+                                <li>we could take a number of tasks
+                                    <ul>
+                                        <li>add flour, sugar, yeast</li>
+                                        <li>mix well with a little water</li>
+                                        <li>let the dough rest</li>
+                                        <li>bake for 30 minutes,</li>
+                                    </ul>
+                                </li>
+                                
+                                <li>Into a single abstraction, for example, <b>bakeBread</b>. Everytime we call the function <b>bakeBread</b>, it will perfrom the tasks.</li>
+                            </ul>
+                        </li>
+                        
+                        <li>Functions can take arguments, however, they are usually passed by value i.e. their value does not change after even though they are changed by the instructions of the function.</li>
+                        
+                        <li>Functions must return a result, which is the data type of the function declaration</li>
+                        
+                        <li>Functions are declared outside any other functions, usually below the loop function</li>
+                        
+                        <a href="programming/function.jpg"><img src="programming/function.jpg" width=500></a><br>
+                        
+                        <a href="programming/function.PNG"><img src="programming/function.PNG" width=500></a>
+                    </ul>
+                      
+                <h2>Arduino IO Functions (Digital)</h2>
+                <ul>
+                    <li>The Arduino Uno board has 14 pins which can be configured as digital I/O</li>
+                    
+                        <ul>
+                            <li>digital, giving/receiving logic levesl of HIGH (+5V) or LOW (0V)</li>
+                            <li>configured as inputs or outputs using software.</li>
+                        </ul>
+                    
+                    <li>The procedure in using the digital pins are</li>
+                    
+                        <ol>
+                            <li>use <b>pinMode()</b> to configure the port to be input or output. The port stays in this mode until another pinMode() is applied, reset occurs or powered off.</li>
+                            <li>use <b>digitalRead()</b> to read the input, or</li>
+                            <li>use <b>digitalWrite()</b> to output a value</li>
+                        </ol>
+                </ul>
+                      
+            </div>
+        </div>
+        
+        <div id="footer">
+            Copyright &copy; 2020 Muhd Fadhli
+        </div>
+        </div>
+	</body>
+</html>
