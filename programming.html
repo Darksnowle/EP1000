@@ -25,6 +25,8 @@
                         <li><a href="laser.html">Laser Cutting</a></li>
                         <li><a href="electronics.html">Electronics</a></li>
                         <li><a class=selected href="programming.html">Programming</a></li>
+                        <li><a href="arduino.html">Further Arduino</a></li>
+                        <li><a href="final.html">Final Project</a></li>
                     </ul>
                 
             </div>
@@ -406,7 +408,7 @@
                         <ul>
                             <li>digital, giving/receiving logic levesl of HIGH (+5V) or LOW (0V)</li>
                             <li>configured as inputs or outputs using software.</li>
-                        </ul>
+                        </ul><br>
                     
                     <li>The procedure in using the digital pins are</li>
                     
@@ -415,7 +417,55 @@
                             <li>use <b>digitalRead()</b> to read the input, or</li>
                             <li>use <b>digitalWrite()</b> to output a value</li>
                         </ol>
-                </ul>
+                    
+                    <p><b>INPUT_PULLUP</b> can be applied on the digital I/O pins which creates a <b>20K pull-up resistor</b> to be enabled in the input mode.</p>
+                    
+                </ul><br>
+                      
+                <h2>Serial Communications</h2>
+                      
+                      <p>The Arduino uses <b>Asynchronous Serial communications</b> to communicate with the IDE. This means that data (usually 8bits) is sent one-bit-at-a-time through the serial interface using the RS-232 asynchronous protocol via the USB to your IDE.</p>
+                      
+                      <p>The following program shows how you can use the Serial Communications interface to send messages to your IDE.</p>
+                      
+                      <a href="programming/serial.PNG"><img src="programming/serial.PNG" width=500></a>
+                      
+                      <ol>
+                        <li>Compile and upload the code to the Arduino board</li>
+                        <li>On the IDE open the Serial monitor, you should see the welcome message and the ‘ok’ message appearing every 5 seconds.</li>
+                      </ol>
+                      
+                      <hr>
+                      
+                      <h2>Assignment</h2>
+                      <ul>
+                          <li><b>Task 1</b></li>
+                            <p>Connect a LED with a current limiting resistor (220 ohms) to port 6 of the Arduino Uno board and write a program to blink the LED in a variety of patterns.</p>
+                      
+                            <a href="programming/task1_code.PNG"><img src=programming/task1_code.PNG width=500></a><br>
+                          <p><i>Click to enlarge</i></p>
+                          
+                          <li><b>Task 2</b></li>
+                            <p>Using the same technique, connect 3 or more LEDs of different colors to the Arduino board using pins 6, 7, and 8 and write a program to produce running lights i.e. the LEDs are lit in sequence e.g. R -> G -> W -> R -> G -> W and so on</p>
+                          
+                            <a href="programming/task2_code.PNG"><img src="programming/task2_code.PNG" width=500></a>
+                          <p><i>Click to enlarge</i></p>
+                          
+                          <li><b>Task 3</b></li>
+                            <p>Add a switch to the circuit in Task 2. A pull-up resistor of 10K should be used if operating in INPUT mode. When the switch is pressed, the LEDs will light up. Pressing the switch again will turn the LEDs off. Write and test this program.</p>
+                          
+                          <a href="programming/task3_code.PNG"><img src=programming/task3_code.PNG width=500></a>
+                          <p><i>Click to enlarge</i></p>
+                          
+                          <li><b>Task 4</b></li>
+                            <p>Use the switch in Task 3 to control the type of light-up and flashing of the LEDs, for example, initially, LEDs are all in the OFF state. Pressing the switch, turns on only the RED LED. Pressing the switch again, turns on only the GREEN LED. Pressing the switch again, turns on only the WHITE LED. Pressing the switch again, turns on all LEDs. Pressing the switch again, turns off all LEDs returning to the first state.</p>
+                          
+                            <a href="programming/task4p1_code.PNG"><img src=programming/task4p1_code.PNG width=500></a>
+                          <p><i>Click to enlarge</i></p>
+                          
+                            <a href="programming/task4p2_code.PNG"><img src=programming/task4p2_code.PNG width=500></a>
+                          <p><i>Click to enlarge</i></p>
+                      </ul>
                       
             </div>
         </div>
