@@ -21,7 +21,6 @@
                         <li><a href="safety.html">FabLab Safety</a></li>
                         <li><a href="Web.html">Project Management, Web Development and Version Control</a></li>
                         <li><a href="CAD.html">Computer Aided Design</a></li>
-                        <li><a class="selected" href="3d.html">3D Printing</a></li>
                         <li><a href="3d.html">3D Printing</a></li>
                         <li><a href="laser.html">Laser Cutting</a></li>
                         <li><a href="electronics.html">Electronics</a></li>
@@ -149,7 +148,41 @@
                       
                       <p>Humidity is the measure of the concentration of water vapor present in the air. Singapore’s humidity is between 70-90%. The <a href=https://components101.com/dht11-temperature-sensor>DHT-11></a> and <a href=https://components101.com/sensors/dht22-pinout-specs-datasheet>DHT-22</a> can both be used to measure temperature and humidty while the <a href=https://components101.com/lm35-temperature-sensor>LM35</a> and <a href=https://components101.com/sensors/ds18b20-temperature-sensor>DS18B20</a> can only measure temperature.</p><br>
                       
-                      <p>Here's an example of the DHT-11 being interfaced along with my program.</p>
+                      
+                      <h3>Distance</h3>
+                      <p>The devices that measures distance can range from a limit switch to an ultrasonic sensor. Examples include <a href=https://www.google.com/search?q=obstacle+avoidance+sensor&tbm=isch&ved=2ahUKEwjbi_LU_5HrAhXXH3IKHRsZAMcQ2-cCegQIABAA&oq=obstac&gs_lcp=CgNpbWcQARgCMgQIABBDMgQIABBDMgQIABBDMgQIABBDMgIIADICCAAyAggAMgIIADICCAAyAggAOgQIIxAnOgUIABCxAzoECAAQHjoGCAAQChAYUMMnWIg-YPFOaAJwAHgAgAE4iAGCA5IBATiYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=FPQxX9uxGde_yAObsoC4DA&bih=1009&biw=1920&rlz=1C1PQHA_enSG864SG864>Obstacle Avoidance Sensor</a>, which is able to detect <b>(not measure)</b> a distance of 2cm to 4m, can use ENABLE pulse or continuous measurement. The aviodance distance is adjusted with a potentiometer. Another example is <a href=https://www.google.com/search?q=ultrasonic+sensor&rlz=1C1PQHA_enSG864SG864&sxsrf=ALeKk02i8uuqgLIJMPcN7ee757dPJ1qUmA:1597109533788&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi63LbTgJLrAhVIWX0KHXxaCA0Q_AUoAXoECA0QAw&biw=1920&bih=1009>Ultrasonic Sensor</a>. It can <b>measure</b> a distance of between 2cm to 4m. It uses SONAR, which returns a pulse proportional to the distance. The ranging accuracy is 3mm and the measuring angle is 15 degrees. Distance is equivalent to pulse measured.</p><br>
+                      
+                      <h2>Assignments (13 July)</h2>
+                      
+                      <h3>DHT-11</h3>
+                      <p>For our assingments this week, we are suppose to interface the two sensors as mentioned above. For the first one, I interfaced the DHT-11. With reference to the picture below, I connected the actual thing on my breadboard.</p>
+                      
+                      <a href="arduino/dht.png"><img src="arduino/dht.png" width=300></a>
+                      <a href="arduino/dhtconnect.jpeg"><img src="arduino/dhtconnect.jpeg" width=300></a>
+                      
+                      <p>Once that is done i went ahead and upload the program onto Arduino IDE, including the <a href=https://github.com/adidax/dht11>DHT Library</a> and it works. This is rather a simple connection and code so there isn't much to it.</p>
+                      
+                      <a href="arduino/dhtcode.PNG"><img src="arduino/dhtcode.PNG" width=500></a>
+                      
+                      <hr>
+                      
+                      <h3>Ultrasonic Sensor</h3>
+                      
+                      <p>Similarly to the DHT-11 connection, as reference to the image below, i connected up the sensor on my breadboard. The red and black wire being VCC and GND respectively while the white and orange is the TIG and ECHO respectively.</p>
+                      
+                      <a href="arduino/ultra.jpg"><img src="arduino/ultra.jpg" width=300></a>
+                      <a href="arduino/ultraconnect.jpeg"><img src="arduino/ultraconnect.jpeg" width=300></a>
+                      
+                      <p>As for the code, the first one works without needing a library(as seen below) however, with the inclusion of the <a href=https://playground.arduino.cc/Code/NewPing>NewPing Library</a>, we are able to get a more accurate reading on our measurements.</p>
+                      
+                      <p><b>Practical Measurement</b></p>
+                      <a href="arduino/ultrameasure.jpeg"><img src="arduino/ultrameasure.jpeg" width=500></a>
+                      
+                      <p><b>Readings without NewPing</b></p>
+                      <a href="arduino/ultranotacc.PNG"><img src="arduino/ultranotacc.PNG" width=500></a>
+                      
+                      <p><b>Readings With NewPing</b></p>
+                      <a href="arduino/ultraacc.PNG"><img src="arduino/ultraacc.PNG" width=500></a>
 
             </div>
         </div>
