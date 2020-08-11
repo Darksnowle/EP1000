@@ -33,20 +33,119 @@
             </div>
                   <div id="main">
                       
-                      <h1>Further Programming Using Arduino</h1>
+                      <h1>Input Devices</h1>
                       
-                      <h2>Analog Inputs & Outputs</h2>
+                      <p>Often called <b>Sensors</b>. The process of connecting a Sensor to a computer processor sustem is called Interfacing.</p>
                       
-                     <h3>Review of switch configurations</h3>
+                      <h2>Sensors</h2>
+                      <ul>
+                          <li>a device, module, machine or subsystem whose purpose is to detect events or changes in its environment and send the information to other electronics, frequently a computer processor.</li>
+                          <li>Used in everyday objects to read changes in the environment</li>
+                          <li>readings are usually analog by nature.</li>
+                          <li>Changes are usually slower in availability (compared to computer processors) and require some processing techniques.</li>
+                      </ul>
                       
-                      <p>There are two common methods of connecting a switch to a microcontroller</p>
-                        <ul>
-                            <li>Normal LOW, Closed HIGH</li>
-                            <li>Normal HIGH, Closed LOW</li>
-                            <li>requires the use of a pull-up/current limiting resistor so that when the switch is closed, there is no short circuit.</li>
+                      <h2>Methods of reading sensors</h2>
+                      <p>There are 3 basic methods of reading/obtaining information from a sensor which are dependant on the availability of the information, as read by the sensor</p>
+                      <ul>
+                        <li>
+                            <b>Always Available</b>
+                            <ul>
+                                <li>Just read the data, data is always available</li>
+                                <li>Changes to the reading occur very slowly.</li>
+                            </ul>
+                            
+                            <b>Polling</b>
+                            <ul>
+                                <li>Processor has to continually query/poll the sensor for information.</li>
+                                <li>Sensor will usually indicate whether there is new information through another signal or have a drastic change in the reading to indicate that there is a new reading available.</li>
+                                <li>When Processor “sees” this change, data is read.</li>
+                                <li>Example is a switch</li>
+                            </ul>
+                                
+                                <b>Triggering</b>
+                                <ul>
+                                    <li>is a signal(s) that is used to initiate the reading.</li>
+                                    <li>The sequence is as follows:
+                                        <ol>Processor sends a signal to the sensor for data</ol>
+                                        <ol>Sensor gathers information, and when ready</ol>
+                                        <ol>Sends reading back to the Processor. The Sensor may also indicate that data is ready to be read by sending back an Acknowledge/Ready signal</ol>
+                                    </li>
+                                    <li>An example is an ultrasonic distance measurement</li>
+                                </ul>
+                                
+                            </li>
                         </ul>
+                          
+                        <h2>Arduino Libraries</h2>
+                          <p>The Arduino System is very popular because there is large number of libraries (of code) available for almost every Sensor that you can think of. There are two types of libraries. Internally by searching it up using the Arduino IDE system, and externally which are available online as compressed C++ code. To add libraries to ur Arduino IDE, </p>
+                          <ul>
+                            <li><b>Using the Library Manager</b></li>
+                                <ol>
+                                    <li>IDE > Sketch > Install Library > Manage Libraries</li>
+                                    <li>Search for library</li>
+                                    <li>Highlight and click Install, when complete, it should state “Installed”</li>
+                                </ol><br>
+                                
+                            <li><b>Using External Library</b></li>
+                              <ol>
+                                <li>Search for the library on the Internet</li>
+                                <li>Download the library, usually in a compressed .ZIP file</li>
+                                <li>IDE > Sketch > Include Library > Add .Zip Library</li>
+                                <li>Re-open IDE.</li>
+                              </ol>
+                              
+                            <li><b>Manually adding External Library</b></li>
+                              <ol>
+                                <li>Search for the library on the Internet</li>
+                                <li>Download the library, usually in a compressed .ZIP file</li>
+                                <li>Locate where your sketch folder is found on your computer <b>(IDE > File > Preferences > Sketchbook)</b></li>
+                                <li>Extract the Library from the ZIP file (this is usually a folder)</li>
+                                <li>Copy the extracted library folder to <b>[Sketchbook folder] > Libraries folder</b></li>
+                                <li>Re-open IDE</li>
+                              </ol>
+                          </ul>
+                        <p>Once you added your Library, to check if it has been successfully added, simply got to <b>IDE > Sketch > Include Library</b> and you should see your installed library there. Simply just click on the library to apply the code to your application.</p>
                       
+                      <h2>Type of sensors</h2>
                       
+                      <h3>Switches</h3>
+                      
+                      <p>It is an electrical component that can disconnect or connect the conducting path of a circuit. It provides a LOW or HIGH signal depending on the circuitry. To determine the value of a switch, we have to use <b>digitalRead()</b>. There are a few types of switches. Those include:</p>
+                      
+                      <ul>
+                        <li>
+                            <a href="https://www.google.com/search?q=toggle+switch&rlz=1C1PQHA_enSG864SG864&sxsrf=ALeKk007wY12r-QsniDnLq0E3VarJNeoIw:1597073944061&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjMnPaI_JDrAhUzmuYKHdhrCOIQ_AUoAXoECA4QAw&biw=1920&bih=1009">Toggle</a>
+                            
+                            <p>This is a mechanical switch that changes the state each time the switch is thrown/manipulated. For example, if in the ON position, throwing the switch will change it to th OFF position and will remain there until the switch is thrown.</p><br>
+                            
+                            <a href="https://www.google.com/search?q=pushbutton+switch&tbm=isch&ved=2ahUKEwjWuJKK_JDrAhV-B7cAHThmAAYQ2-cCegQIABAA&oq=pushbut+switch&gs_lcp=CgNpbWcQARgAMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yCAgAEAcQBRAeMggIABAHEAUQHjIICAAQBxAFEB4yCAgAEAcQBRAeMggIABAHEAUQHjIICAAQBxAFEB46BwgAELEDEEM6BAgAEEM6AggAUOPtBliNjgdg25MHaABwAHgAgAFHiAGPBZIBAjEzmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=GmoxX9bDJf6O3LUPuMyBMA&bih=1009&biw=1920&rlz=1C1PQHA_enSG864SG864">Pushbutton</a>
+                            
+                            <p>This is a spring-loaded mechanical switch that changes state when the switch is pressed. When released (and because of the spring) the switch returns to the original state. There are two types of pushbutton switches. The one that is normally closes where you push it to open or break connection adn the one that is normally open which does the same thing.</p>
+                            
+                            <a href="https://www.google.com/search?q=slide+switch&tbm=isch&ved=2ahUKEwiM0OTC_JDrAhVLEbcAHeQeAvMQ2-cCegQIABAA&oq=slide+switch&gs_lcp=CgNpbWcQAzIECAAQQzIECAAQQzIECAAQQzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BggAEAcQHlDGowVYyKcFYJ-pBWgAcAB4AIABbYgBtAKSAQM0LjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=kWoxX8zDGMui3LUP5L2ImA8&bih=1009&biw=1920&rlz=1C1PQHA_enSG864SG864">Slide</a>
+                            
+                            <p>This is a switch which is closed or opened by a sliding mechanism and when changed, the switch remains in the new state.</p>
+                            
+                            <a href="https://www.google.com/search?q=touch+capacitive+switch&tbm=isch&ved=2ahUKEwjS_Z-d_ZDrAhWW3HMBHR7FDZsQ2-cCegQIABAA&oq=touch+capaci+switch&gs_lcp=CgNpbWcQARgAMgYIABAHEB4yCAgAEAgQBxAeMggIABAIEAcQHjIICAAQCBAHEB4yCAgAEAgQBxAeMggIABAIEAcQHjIICAAQCBAHEB4yCAgAEAgQBxAeMggIABAIEAcQHjIICAAQCBAHEB5QyFpYsmFgwcgBaABwAHgAgAE5iAG7AZIBATSYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=T2sxX5KaB5a5z7sPnoq32Ak&bih=1009&biw=1920&rlz=1C1PQHA_enSG864SG864">Touch Capacitive</a>
+                            
+                            <p>This is a switch that works based on body capacitance. When a person touches it, the body increases the capacitance of the switch and triggers the switch. </p>
+                        </li>
+                      </ul>
+                      
+                      <h3>Temperature, Humidity</h3>
+                      
+                      <p>The environment can be measured using a number of devices, the most common and cheapest is to use the DHT-11 temperature and humidity sensor. Temperature is a physical quantity that expresses hot or cold. Reference temperatures include:</p>
+                      
+                      <ul>
+                        <li>Water Freezing Point = 0 Degress Celsius</li>
+                        <li>Water Boiling Point = 100 Degrees Celsius</li>
+                        <li>Typical Singapore Temperature = 28 - 32 Degrees Celsius</li>
+                      </ul>
+                      
+                      <p>Humidity is the measure of the concentration of water vapor present in the air. Singapore’s humidity is between 70-90%. The <a href=https://components101.com/dht11-temperature-sensor>DHT-11></a> and <a href=https://components101.com/sensors/dht22-pinout-specs-datasheet>DHT-22</a> can both be used to measure temperature and humidty while the <a href=https://components101.com/lm35-temperature-sensor>LM35</a> and <a href=https://components101.com/sensors/ds18b20-temperature-sensor>DS18B20</a> can only measure temperature.</p><br>
+                      
+                      <p>Here's an example of the DHT-11 being interfaced along with my program.</p>
 
             </div>
         </div>
