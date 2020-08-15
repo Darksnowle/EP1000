@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fadhli's Website</title>
+        <link rel="stylesheet" type="text/css" href="style3.css" />
+	</head>
+
+	<body>
+		<div id="container"> 
+            <div id="header">
+                <h1>Fadhli's Website</h1>
+            </div>
+        
+        <div id="content">
+            <div id="nav">
+                <h2>Navigation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="info.html">Module Schedule</a></li>
+                        <li><a href="safety.html">FabLab Safety</a></li>
+                        <li><a href="Web.html">Project Management, Web Development and Version Control</a></li>
+                        <li><a href="CAD.html">Computer Aided Design</a></li>
+                        <li><a href="3d.html">3D Printing</a></li>
+                        <li><a href="laser.html">Laser Cutting</a></li>
+                        <li><a href="electronics.html">Electronics</a></li>
+                        <li><a href="programming.html">Programming</a></li>
+                        <li><a href="arduino.html">Further Arduino</a></li>
+                        <li><a href="final.html">Final Project</a>
+                            <ul>
+                                <li><a href=week1.html>Week 1</a></li>
+                                <li><a href=week2.html>Week 2</a></li>
+                                <li><a href=week3.html>Week 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                
+            </div>
+                  <div id="main">
+                     <h1>Week 3</h1>
+                      
+                      <p>For this week, my main priority was the software side of things. I have a few references which i got inspiration from but some main ones which really helped me with the making of my final design include:</p>
+                      <ul>
+                        <li>Neutrino - <a href="https://www.youtube.com/watch?v=z2o4hmli_10&list=LLi40E2-YnPCpbIWS_MvPiUA&index=11&t=286s">[DIY] Arduino MP3 player with oled[Soundpod part-1]</a></li>
+                        <li>MYTECTUTOR - <a href="https://www.youtube.com/watch?v=rOpKAKjIrqM&list=LLi40E2-YnPCpbIWS_MvPiUA&index=9">MP3 PLAYER USING DFPLAYER MINI MODULE WITH ARDUINO.</a></li>
+                        <li>learnelectronic - <a href="https://www.youtube.com/watch?v=TwM1sp2IXYI&list=LLi40E2-YnPCpbIWS_MvPiUA&index=8">How to Detect Short, Long, and Double Clicks with Arduino</a></li> 
+                      </ul>
+                      
+                      <p>I first started off by testing out of the speakers are working and in a good condition. To do so, since i did not have a multimeter at home, I had no choice but go ahead and actually connect it up with my DFPlayer which is basically a MP3 player board which uses SDcard. The neat thing about the DFPlayer is that it works even without and codes. So, all i had to do was connect it up (just like in Neutrino's video). It took a few tries but I got it to work eventually. </p>
+                      
+                      <video controls >
+                        <source src="video/1stattempt.mp4" type="video/mp4"  >
+                      </video>
+                      <p>(Sorry for the poor camera work I was alittle bit too excited)</p>
+                      
+                      <p>If you're wondering what are the buttons for, on board the DFPlayer you are able to skip songs or control volume. Those buttons are just there to skip the songs i have downloaded on my SD card. Right after that, I started to work on the programming side of things. It wasn't that difficult however the challenging part was to incorperate 2 different codes at once. The codes were already readily available but I just had to combine both of them. The idea was, to have three buttons. The left for volume down and also to play the previous song, the middle one is just to simple play and pause the audio and the right one is for volume up and play the next track. The codes that are available online ony shows how to set up one buttons for each action. I had an idea to include double or long clicks to help change the tracks. That's when i come across <b>learnelectronic's</b> video where he shows how long clicks and double click works alongside his code.</p>
+                      
+                      <p>So for the first code like i mentioned previously, is just a simple DFPlayer code which uses the IDE library, <b>SoftwareSerial</b>. The main idea of this code is to just read button clicks and run the function. It is quite lengthy to be placed as images so heres the code instead which i got from mytectutor.com. <a href="arduino/dfcode/">DFPlayer with Buttons</a>. As for the button press codes, here is the link to the code as well. <a href=https://pastebin.com/xEr5kV5j>Detect single, double, and long press</a>.</p>
+                      
+                      
+                      
+
+            </div>
+        </div>
+        
+        <div id="footer">
+            Copyright &copy; 2020 Muhd Fadhli
+        </div>
+        </div>
+	</body>
+</html>
